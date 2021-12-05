@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
+        <businessObject qualifiedName="com.company.model.FirmaRecenzija">
+            <fields>
+                <field type="LONG" length="255" name="firmaId" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.RecenzijaFirme" fetchType="LAZY" name="recenzijaFirme" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.KatergorijaPosla">
             <fields>
                 <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.KlijentRecenzija">
+            <fields>
+                <field type="LONG" length="255" name="klijentId" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.RecenzijaKlijenta" fetchType="LAZY" name="recenzijaKlijenta" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -14,6 +32,22 @@
                 <field type="FLOAT" length="255" name="cena" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="rokIzvrsenjaPosla" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="prihvacena" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.RecenzijaFirme">
+            <fields>
+                <field type="INTEGER" length="255" name="recenzija" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.RecenzijaKlijenta">
+            <fields>
+                <field type="INTEGER" length="255" name="recenzija" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
