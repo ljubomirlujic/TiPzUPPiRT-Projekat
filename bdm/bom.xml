@@ -29,9 +29,13 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.PonudaFirme">
             <fields>
-                <field type="FLOAT" length="255" name="cena" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="rokIzvrsenjaPosla" nullable="false" collection="false"/>
-                <field type="BOOLEAN" length="255" name="prihvacena" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="prihvatiPosao" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="cena" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="rokIzvrsenjaPosla" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="prihvatiPonudu" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="traziDodatneInformacije" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="zahtjev" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="datumPocetkaRadova" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -45,7 +49,8 @@
                 <field type="LOCALDATE" length="255" name="rokZaPrimanjePonuda" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="rokZaZavrsavanjePosla" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="maksimalanBrojPonuda" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.PonudaFirme" fetchType="EAGER" name="ponude" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.PonudaFirme" fetchType="EAGER" name="ponude" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="zavrsen" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -69,7 +74,7 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.ZahtevZaNabavku">
             <fields>
-                <field type="STRING" length="255" name="Posao" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Posao" fetchType="LAZY" name="poslovi" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
