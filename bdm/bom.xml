@@ -73,7 +73,7 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.ZahtevZaNabavku">
             <fields>
-                <relationField type="COMPOSITION" reference="com.company.model.Posao" fetchType="EAGER" name="poslovi" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Posao" fetchType="EAGER" name="poslovi" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
