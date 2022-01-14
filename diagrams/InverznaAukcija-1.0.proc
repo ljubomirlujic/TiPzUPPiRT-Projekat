@@ -12,6 +12,18 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_4as0-HFXEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_4as0-XFXEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_4as0-nFXEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_DmWvEXTPEeyr3YUd2VGIZw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_DmWvEnTPEeyr3YUd2VGIZw" name="zahtevZaUslugu" content="zahtevZaUslugu" type="TYPE_VARIABLE" returnType="com.company.model.ZahtevZaNabavku">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wglQoHTREeyr3YUd2VGIZw" name="zahtevZaUslugu" dataType="_4as1JHFXEeywcaqqGLWSMw" className="com.company.model.ZahtevZaNabavku"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_DmWvFHTPEeyr3YUd2VGIZw" name="zahtevZaUsluguInput.poslovi" content="def posaoList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;zahtevZaUsluguInput?.poslovi.each{&#xD;&#xA;&#x9;//Add Posao instance&#xD;&#xA;&#x9;posaoList.add({ currentPosaoInput ->&#xD;&#xA;&#x9;&#x9;def posaoVar =      .poslovi.find { it.persistenceId.toString() == currentPosaoInput.persistenceId_string} ?: new com.company.model.Posao()&#xD;&#xA;&#x9;&#x9;posaoVar.kategorijaPosla = {&#xD;&#xA;&#x9;&#x9;&#x9;//Retrieve aggregated KategorijaPosla using its DAO and persistenceId&#xD;&#xA;&#x9;&#x9;&#x9;def kategorijaPoslaVar = kategorijaPoslaDAO.findByPersistenceId(currentPosaoInput.kategorijaPosla?.persistenceId_string?.trim() ? currentPosaoInput.kategorijaPosla.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;&#x9;if (!kategorijaPoslaVar) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (currentPosaoInput.kategorijaPosla?.persistenceId_string?.trim() ? currentPosaoInput.kategorijaPosla.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `KategorijaPosla` with the persistence id &quot; + currentPosaoInput.kategorijaPosla?.persistenceId_string?.trim() ? currentPosaoInput.kategorijaPosla.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return null&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;kategorijaPoslaVar.naziv = currentPosaoInput.kategorijaPosla?.naziv&#xD;&#xA;&#x9;&#x9;&#x9;return kategorijaPoslaVar}()&#xD;&#xA;&#x9;&#x9;posaoVar.opisPosla = currentPosaoInput.opisPosla&#xD;&#xA;&#x9;&#x9;posaoVar.vrednostPosla = currentPosaoInput.vrednostPosla?.toFloat()&#xD;&#xA;&#x9;&#x9;posaoVar.rokZaPrimanjePonuda = currentPosaoInput.rokZaPrimanjePonuda&#xD;&#xA;&#x9;&#x9;posaoVar.rokZaZavrsavanjePosla = currentPosaoInput.rokZaZavrsavanjePosla&#xD;&#xA;&#x9;&#x9;return posaoVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return posaoList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_DmWvFXTPEeyr3YUd2VGIZw" name="zahtevZaUsluguInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_DmWvF3TPEeyr3YUd2VGIZw" name="kategorijaPoslaDAO" content="kategorijaPoslaDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.KategorijaPoslaDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_DmWvGHTPEeyr3YUd2VGIZw" type="JAVA_METHOD" expression="setPoslovi">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_4as0-3FXEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_4as0_HFXEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_4as0_XFXEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -20,18 +32,61 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_Vl15eXFYEeywcaqqGLWSMw">
             <targetForm xmi:type="expression:Expression" xmi:id="_Vl15enFYEeywcaqqGLWSMw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_Vl15eHFYEeywcaqqGLWSMw"/>
+          <contract xmi:type="process:Contract" xmi:id="_Vl15eHFYEeywcaqqGLWSMw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_DmWvAHTPEeyr3YUd2VGIZw" name="zahtevZaUsluguInput" type="COMPLEX" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_DmWvAXTPEeyr3YUd2VGIZw" name="poslovi" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_DmWvAnTPEeyr3YUd2VGIZw" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_DmWvA3TPEeyr3YUd2VGIZw" name="kategorijaPosla" type="COMPLEX" createMode="false">
+                  <inputs xmi:type="process:ContractInput" xmi:id="_DmWvBHTPEeyr3YUd2VGIZw" name="persistenceId_string" createMode="false"/>
+                  <inputs xmi:type="process:ContractInput" xmi:id="_DmWvBXTPEeyr3YUd2VGIZw" name="naziv" createMode="false"/>
+                </inputs>
+                <inputs xmi:type="process:ContractInput" xmi:id="_DmWvBnTPEeyr3YUd2VGIZw" name="opisPosla" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_DmWvB3TPEeyr3YUd2VGIZw" name="vrednostPosla" type="DECIMAL" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_DmWvCHTPEeyr3YUd2VGIZw" name="rokZaPrimanjePonuda" type="LOCALDATE" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_DmWvCXTPEeyr3YUd2VGIZw" name="rokZaZavrsavanjePosla" type="LOCALDATE" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_dg4-YHTPEeyr3YUd2VGIZw" name="ocekivaniBrojPonuda" type="INTEGER">
+                  <mapping xmi:type="process:ContractInputMapping" xmi:id="_dg4-YXTPEeyr3YUd2VGIZw"/>
+                </inputs>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvCnTPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.kategorijaPosla.flatten().every{it!=null}" errorMessage="KategorijaPosla is mandatory for Posao" name="mandatory_zahtevZaUsluguInput_poslovi_kategorijaPosla">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvC3TPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.kategorijaPosla.flatten().every{!it || it.persistenceId_string}" errorMessage="KategorijaPosla must reference an existing instance with a persistenceId for Posao" name="aggregation_zahtevZaUsluguInput_poslovi_kategorijaPosla">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvDHTPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.kategorijaPosla?.naziv.flatten().every{it!=null}" errorMessage="naziv is mandatory for KategorijaPosla" name="mandatory_zahtevZaUsluguInput_poslovi_kategorijaPosla_naziv">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvDXTPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.opisPosla.flatten().every{it!=null}" errorMessage="opisPosla is mandatory for Posao" name="mandatory_zahtevZaUsluguInput_poslovi_opisPosla">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvDnTPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.vrednostPosla.flatten().every{it!=null}" errorMessage="vrednostPosla is mandatory for Posao" name="mandatory_zahtevZaUsluguInput_poslovi_vrednostPosla">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvD3TPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.rokZaPrimanjePonuda.flatten().every{it!=null}" errorMessage="rokZaPrimanjePonuda is mandatory for Posao" name="mandatory_zahtevZaUsluguInput_poslovi_rokZaPrimanjePonuda">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_DmWvEHTPEeyr3YUd2VGIZw" expression="zahtevZaUsluguInput?.poslovi?.rokZaZavrsavanjePosla.flatten().every{it!=null}" errorMessage="rokZaZavrsavanjePosla is mandatory for Posao" name="mandatory_zahtevZaUsluguInput_poslovi_rokZaZavrsavanjePosla">
+              <inputNames>zahtevZaUsluguInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Vl15e3FYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:CallActivity" xmi:id="_l-eUwHFYEeywcaqqGLWSMw" name="ObradaZahteva" outgoing="_b1LUEHFZEeywcaqqGLWSMw" incoming="_sua-kHFYEeywcaqqGLWSMw" type="PARALLEL">
+        <elements xmi:type="process:CallActivity" xmi:id="_l-eUwHFYEeywcaqqGLWSMw" name="ObradaZahteva" outgoing="_b1LUEHFZEeywcaqqGLWSMw" incoming="_sua-kHFYEeywcaqqGLWSMw" type="PARALLEL" collectionDataToMultiInstantiate="_jWm_IHTQEeyr3YUd2VGIZw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_iHxwAnFYEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_iHxwAXFYEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_iHxwA3FYEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <loopCondition xmi:type="expression:Expression" xmi:id="_iHxwBHFYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_iHxwBXFYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_iHxwBnFYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_iHxwCHFYEeywcaqqGLWSMw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_iHxwCHFYEeywcaqqGLWSMw" name="posao" content="posao" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_iHxwB3FYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <inputMappings xmi:type="process:InputMapping" xmi:id="_B_WNkHTSEeyr3YUd2VGIZw" subprocessTarget="posao" assignationType="Data">
+            <processSource xmi:type="expression:Expression" xmi:id="_B_WNkXTSEeyr3YUd2VGIZw" name="posao" content="posao" type="TYPE_VARIABLE" returnType="java.lang.Object">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_Diy9UHTSEeyr3YUd2VGIZw" name="posao" dataType="_4as1InFXEeywcaqqGLWSMw" className="java.lang.Object"/>
+            </processSource>
+          </inputMappings>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_l-e703FYEeywcaqqGLWSMw" name="UgovaranjePosla" content="UgovaranjePosla" returnTypeFixed="true"/>
           <calledActivityVersion xmi:type="expression:Expression" xmi:id="_l-e71HFYEeywcaqqGLWSMw" name="1.0" content="1.0" returnTypeFixed="true"/>
         </elements>
@@ -41,6 +96,12 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_W0K4UnFZEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
         </elements>
       </elements>
+      <data xmi:type="process:JavaObjectData" xmi:id="_jWm_IHTQEeyr3YUd2VGIZw" name="listaPoslova" dataType="_4as1InFXEeywcaqqGLWSMw" className="java.util.List">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_jWm_IXTQEeyr3YUd2VGIZw" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_upDHQHTREeyr3YUd2VGIZw" name="zahtevZaUslugu" dataType="_4as1JHFXEeywcaqqGLWSMw" className="com.company.model.ZahtevZaNabavku">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_upDHQXTREeyr3YUd2VGIZw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_4as1BHFXEeywcaqqGLWSMw">
         <targetForm xmi:type="expression:Expression" xmi:id="_4as1BXFXEeywcaqqGLWSMw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>

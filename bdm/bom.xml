@@ -50,6 +50,7 @@
                 <field type="LOCALDATE" length="255" name="rokZaZavrsavanjePosla" nullable="false" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.company.model.PonudaFirme" fetchType="EAGER" name="ponude" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="zavrsen" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="ocekivaniBrojPonuda" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

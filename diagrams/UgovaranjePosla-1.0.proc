@@ -315,6 +315,9 @@
           <expectedDuration xmi:type="expression:Expression" xmi:id="_PloQM3FoEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_Fyu5QHTKEeyr3YUd2VGIZw" name="posao" dataType="_qMzhFHFZEeywcaqqGLWSMw" className="com.company.model.Posao">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_Fyu5QXTKEeyr3YUd2VGIZw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_qMzg9HFZEeywcaqqGLWSMw">
         <targetForm xmi:type="expression:Expression" xmi:id="_qMzg9XFZEeywcaqqGLWSMw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
