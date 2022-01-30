@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="InvertovanaAukcija">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="guest">
+      <firstName>guest</firstName>
+      <lastName>guest</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">guest</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Clan">
+      <displayName>Clan</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Klijenti">
+      <displayName>Klijenti</displayName>
+    </group>
+    <group name="Agenti">
+      <displayName>Agenti</displayName>
+    </group>
+    <group name="Gosti">
+      <displayName>Gosti</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>guest</userName>
+      <roleName>Clan</roleName>
+      <groupName>Gosti</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>
