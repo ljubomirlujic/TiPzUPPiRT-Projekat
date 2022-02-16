@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "kategorijePoslaForm",
   "name" : "kategorijePoslaForm",
-  "lastUpdate" : 1643564238816,
+  "lastUpdate" : 1645034312394,
   "rows" : [
     [
       {
@@ -481,7 +481,11 @@
       "value" : [
         "../API/bdm/businessData/com.company.model.KategorijaPosla?q=find&p=0&c=99"
       ],
-      "advancedOptions" : { },
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
       "exposed" : false
     }
   },

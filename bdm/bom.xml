@@ -43,12 +43,12 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.Posao">
             <fields>
-                <relationField type="AGGREGATION" reference="com.company.model.KategorijaPosla" fetchType="LAZY" name="kategorijaPosla" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.KategorijaPosla" fetchType="LAZY" name="kategorijaPosla" nullable="true" collection="true"/>
                 <field type="TEXT" length="255" name="opisPosla" nullable="false" collection="false"/>
                 <field type="FLOAT" length="255" name="vrednostPosla" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="rokZaPrimanjePonuda" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="rokZaZavrsavanjePosla" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.company.model.PonudaFirme" fetchType="EAGER" name="ponude" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.company.model.PonudaFirme" fetchType="EAGER" name="ponude" nullable="true" collection="true"/>
                 <field type="BOOLEAN" length="255" name="zavrsen" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="ocekivaniBrojPonuda" nullable="false" collection="false"/>
             </fields>
