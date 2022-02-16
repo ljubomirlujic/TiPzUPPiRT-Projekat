@@ -12,8 +12,8 @@
     </user>
   </users>
   <roles>
-    <role name="Clan">
-      <displayName>Clan</displayName>
+    <role name="clan">
+      <displayName>clan</displayName>
     </role>
   </roles>
   <groups>
@@ -30,7 +30,7 @@
   <memberships>
     <membership>
       <userName>guest</userName>
-      <roleName>Clan</roleName>
+      <roleName>clan</roleName>
       <groupName>Gosti</groupName>
     </membership>
   </memberships>

@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm1",
-  "name" : "newForm1",
-  "lastUpdate" : 1643559758268,
+  "id" : "registracijaForma",
+  "name" : "registracijaForma",
+  "lastUpdate" : 1643628914794,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "aca4a899-f9a8-4903-8a6f-118d02c7f71f",
+        "reference" : "a4d147cb-d933-480a-8c28-d0b1f16cb037",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "c49f9385-3068-477f-8f9a-d3e13ecbbac1",
+              "reference" : "bc97e9ed-8388-4160-af27-a0e58b093df4",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "d7c818d7-10f5-46e5-a90a-22d361964ef8",
+              "reference" : "2875e000-fd3f-435e-afe3-cf75753bf545",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "f12566fb-50d9-4739-bbf0-8b015c547382",
+        "reference" : "fafd8ecb-e3a5-448c-be31-a9bc9cd37432",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "a512b5b1-6acf-491e-a190-ecd1ee52cec9",
+          "reference" : "8d11b7e6-60b9-4277-8d5f-af3e3811ffdd",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -151,7 +151,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Kategorije Posla Input"
+                    "value" : "Podaci"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -162,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "c703be52-d5ff-4371-9187-919b5b0e5d2c",
+                "reference" : "5d5cc77c-ef8d-4ee0-bce6-5887c3dffeab",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -179,8 +179,7 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable",
-                    "value" : "formInput.kategorijePoslaInput"
+                    "type" : "variable"
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -195,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a42331d3-ce8f-4fc6-ac67-da438dbf6cae",
+                "reference" : "8b9cac96-0320-4569-8252-64ccff720aae",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -235,7 +234,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Persistence Id_string"
+                          "value" : "Ime"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -250,14 +249,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "$item.persistenceId_string"
+                          "value" : "formInput.podaci.ime"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
                         }
                       },
-                      "reference" : "61da2ed7-e23b-4e24-9877-1206afa73f8b",
+                      "reference" : "dcc64f10-943b-4a02-86fd-9521f41678d2",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -299,7 +298,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Naziv"
+                          "value" : "Email"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -314,14 +313,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "$item.naziv"
+                          "value" : "formInput.podaci.email"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
                         }
                       },
-                      "reference" : "83a5121b-ae48-4c6c-9a30-c68c9a31380b",
+                      "reference" : "c0e1212a-e5ac-4a9e-8c61-86760aa15e7d",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -337,9 +336,365 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "removeItem" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Korisnicko Ime"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
                           "type" : "variable",
-                          "value" : "$item"
+                          "value" : "formInput.podaci.korisnickoIme"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "7b1cb7d0-e178-442f-810d-fc4a1bc6a3ca",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Sifra"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.podaci.sifra"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "358d3c2f-0dce-481e-8681-fc68e20b91d9",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Adresa"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.podaci.adresa"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "662a5f2f-f4f0-4c36-baa6-5d99743b75ed",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Mesto"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.podaci.mesto"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "38231370-09a5-4837-9865-7481906a993e",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Postanski Broj"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.podaci.postanskiBroj"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "bfca611b-52da-49ad-afe3-16d41765fb30",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -349,132 +704,30 @@
                           "type" : "constant",
                           "value" : ""
                         },
-                        "buttonStyle" : {
-                          "type" : "constant",
-                          "value" : "danger"
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "<span class=\"glyphicon glyphicon-remove\"></span>"
-                        },
-                        "dataToSend" : {
-                          "type" : "expression"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "collectionPosition" : {
-                          "type" : "constant",
-                          "value" : "Item"
-                        },
-                        "targetUrlOnSuccess" : {
-                          "type" : "interpolation"
-                        },
-                        "action" : {
-                          "type" : "constant",
-                          "value" : "Remove from collection"
-                        },
-                        "collectionToModify" : {
-                          "type" : "variable",
-                          "value" : "$collection"
-                        },
-                        "valueToAdd" : {
-                          "type" : "expression"
-                        },
                         "disabled" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "right"
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Agent"
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.podaci.agent"
                         }
                       },
-                      "reference" : "dfe7e7a2-49c3-4bf3-96be-6b4244c199dd",
+                      "reference" : "209d1561-8528-44b0-b394-26d24947ab61",
                       "hasValidationError" : false,
-                      "id" : "pbButton",
+                      "id" : "pbCheckbox",
                       "description" : ""
                     }
                   ]
                 ]
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "removeItem" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "buttonStyle" : {
-                    "type" : "constant",
-                    "value" : "primary"
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "<span class=\"glyphicon glyphicon-plus\"></span>"
-                  },
-                  "dataToSend" : {
-                    "type" : "expression"
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "collectionPosition" : {
-                    "type" : "constant"
-                  },
-                  "targetUrlOnSuccess" : {
-                    "type" : "interpolation"
-                  },
-                  "action" : {
-                    "type" : "constant",
-                    "value" : "Add to collection"
-                  },
-                  "collectionToModify" : {
-                    "type" : "variable",
-                    "value" : "formInput.kategorijePoslaInput"
-                  },
-                  "valueToAdd" : {
-                    "type" : "expression",
-                    "value" : "{\r\n  \"persistenceId_string\" : \"\",\r\n  \"naziv\" : \"\"\r\n}"
-                  },
-                  "disabled" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "a6e2cd70-854a-4a6f-a995-e69800436a1f",
-                "hasValidationError" : false,
-                "id" : "pbButton",
-                "description" : ""
               }
             ],
             [
@@ -548,7 +801,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "949bf5d5-acdb-411a-8eef-9eacd3ce3a0e",
+                "reference" : "22547e56-2dbb-47cc-877f-9a305b1d9bad",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -600,7 +853,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "07534f08-42e6-4035-8897-a74bb21395cd",
+                "reference" : "d3348a90-4386-47d0-9a1d-39bcd7d14d80",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -613,16 +866,16 @@
   ],
   "assets" : [
     {
-      "id" : "b9a35ca5-137b-4a8b-b346-e58d6b61c2e2",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "029f4df4-8d30-4f69-b5f5-24df0d51f466",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "c7507e6e-44af-48e0-94cc-3f4efb414dc9",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "e811b3c1-ccae-43d0-b020-42ae1e19d03e",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -640,7 +893,15 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"kategorijePoslaInput\" : [ ]\r",
+        "  \"podaci\" : {\r",
+        "    \"ime\" : \"\",\r",
+        "    \"email\" : \"\",\r",
+        "    \"korisnickoIme\" : \"\",\r",
+        "    \"adresa\" : \"\",\r",
+        "    \"mesto\" : \"\",\r",
+        "    \"postanskiBroj\" : \"\",\r",
+        "    \"agent\" : false\r",
+        "  }\r",
         "}"
       ],
       "exposed" : false
@@ -664,7 +925,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tkategorijePoslaInput: $data.formInput.kategorijePoslaInput",
+        "\tpodaci: $data.formInput.podaci,",
         "}"
       ],
       "exposed" : false
@@ -685,7 +946,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "0feeb465-e4e7-461c-b657-14169f09669d",
+  "uuid" : "2122f2b1-f308-45ee-936b-e5e13db1f142",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

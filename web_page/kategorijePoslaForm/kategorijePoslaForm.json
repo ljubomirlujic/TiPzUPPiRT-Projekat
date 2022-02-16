@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "izborKategorijeForm",
-  "name" : "izborKategorijeForm",
-  "lastUpdate" : 1643559124334,
+  "id" : "kategorijePoslaForm",
+  "name" : "kategorijePoslaForm",
+  "lastUpdate" : 1643564238816,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "3a9f0389-8433-4e4d-8722-913bead4522c",
+        "reference" : "ae0de5ba-b3fd-4fdf-9023-5379ed764ee7",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "b9cabbbd-b1f9-4c2f-b1e0-f66a7e43de9c",
+              "reference" : "7d1bd1a8-d51f-4deb-b7f8-0dd9e8ebf6cf",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "f85f99af-9665-4425-b341-514ea0c2a4e1",
+              "reference" : "47f7d806-0933-4134-a4c1-a9f198335495",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "1e4cc1a5-833b-4010-847d-0f83bed1a0a4",
+        "reference" : "4ab5e00d-ae4b-4edb-abd9-e073457e336d",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "e773883d-1525-4f87-ac69-8179f5aef95c",
+          "reference" : "32c3a47b-5614-460b-90b2-50a9aab5798f",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -162,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a07d4e20-ffa7-4e6f-8f31-dbf8b75f42ca",
+                "reference" : "2e050433-0ef7-40d7-ac4e-f29f5f4f5c36",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -179,8 +179,7 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable",
-                    "value" : "kategorijePosla"
+                    "type" : "variable"
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -195,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "e7a81d9d-5f13-4cdc-8192-cd11c07fd96e",
+                "reference" : "1d937182-0be8-4ebe-8cea-21ef073fbd89",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -209,27 +208,23 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : ""
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
+                        "disabled" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : false
                         },
-                        "cssClasses" : {
+                        "required" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : true
                         },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
@@ -237,198 +232,39 @@
                           "type" : "interpolation",
                           "value" : "Naziv"
                         },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
                         "placeholder" : {
+                          "type" : "interpolation"
+                        },
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "kategorijePoslaQuery"
+                        },
+                        "displayedKey" : {
+                          "type" : "constant",
+                          "value" : "naziv"
+                        },
+                        "returnedKey" : {
                           "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "$item.naziv"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
+                          "value" : "kategorijePosla.naziv"
                         }
                       },
-                      "reference" : "efc4c112-338b-4bd8-a6b4-335ecb411c58",
+                      "reference" : "1b3b500c-a07f-4ebc-9219-45d2e76a47ea",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "removeItem" : {
-                          "type" : "variable",
-                          "value" : "$item"
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "buttonStyle" : {
-                          "type" : "constant",
-                          "value" : "danger"
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "<span class=\"glyphicon glyphicon-remove\"></span>"
-                        },
-                        "dataToSend" : {
-                          "type" : "expression"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "collectionPosition" : {
-                          "type" : "constant",
-                          "value" : "Item"
-                        },
-                        "targetUrlOnSuccess" : {
-                          "type" : "interpolation"
-                        },
-                        "action" : {
-                          "type" : "constant",
-                          "value" : "Remove from collection"
-                        },
-                        "collectionToModify" : {
-                          "type" : "variable",
-                          "value" : "$collection"
-                        },
-                        "valueToAdd" : {
-                          "type" : "expression"
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "right"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        }
-                      },
-                      "reference" : "968aab19-d1fe-44f1-a8d5-c8e17feccb05",
-                      "hasValidationError" : false,
-                      "id" : "pbButton",
-                      "description" : ""
+                      "id" : "pbSelect"
                     }
                   ]
                 ]
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "removeItem" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "buttonStyle" : {
-                    "type" : "constant",
-                    "value" : "primary"
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Add KategorijaPosla"
-                  },
-                  "dataToSend" : {
-                    "type" : "expression"
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "collectionPosition" : {
-                    "type" : "constant"
-                  },
-                  "targetUrlOnSuccess" : {
-                    "type" : "interpolation"
-                  },
-                  "action" : {
-                    "type" : "constant",
-                    "value" : "Add to collection"
-                  },
-                  "collectionToModify" : {
-                    "type" : "variable",
-                    "value" : "kategorijePosla"
-                  },
-                  "valueToAdd" : {
-                    "type" : "expression",
-                    "value" : "{\r\n  \"persistenceId_string\" : \"\",\r\n  \"naziv\" : \"\"\r\n}"
-                  },
-                  "disabled" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "2010f244-d69d-4b16-8916-229f4b0d4063",
-                "hasValidationError" : false,
-                "id" : "pbButton",
-                "description" : ""
               }
             ],
             [
@@ -502,7 +338,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "65dd8e31-afe2-47b9-8e83-6cfc4fa7d671",
+                "reference" : "03b5a4a3-6a79-4f11-b62a-cf546a7f0734",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -554,7 +390,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "eae4362a-8905-4869-825c-35e8652e5df2",
+                "reference" : "baf879d7-0305-466e-9b60-6732b1256fad",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -567,16 +403,16 @@
   ],
   "assets" : [
     {
-      "id" : "ef46cc1a-55a9-4a41-b94f-a994cdbb170b",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "ba57409c-c32f-4f17-a8d9-312ddf784e40",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "2a2e4c0d-314e-49b9-9134-a4bebba6bbb8",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "d0d1cc8d-7602-4135-943f-26f3f9d27154",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -618,10 +454,9 @@
         "if( $data.kategorijePosla ){",
         "\treturn {",
         "\t\t//map kategorijePosla variable to expected task contract input",
-        "\t\tkategorijePoslaInput: $data.kategorijePosla.map( it => ({",
-        "\t\t\tpersistenceId_string: it.persistenceId_string !== undefined ? it.persistenceId_string : null,",
-        "\t\t\tnaziv: it.naziv !== undefined ? it.naziv : null",
-        "\t\t}))",
+        "\t\tkategorijePoslaInput: {",
+        "\t\t\tnaziv: $data.kategorijePosla.naziv !== undefined ? $data.kategorijePosla.naziv : null",
+        "\t\t}",
         "\t}",
         "}"
       ],
@@ -640,10 +475,18 @@
         "id"
       ],
       "exposed" : false
+    },
+    "kategorijePoslaQuery" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/com.company.model.KategorijaPosla?q=find&p=0&c=99"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "e37399be-ca00-4445-a8d0-a5aa74b788cb",
+  "uuid" : "febea275-20f2-43ad-a0cd-52ba995fd5dd",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
