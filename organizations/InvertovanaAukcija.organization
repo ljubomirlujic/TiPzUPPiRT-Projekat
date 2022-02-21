@@ -10,6 +10,24 @@
       <password encrypted="false">guest</password>
       <customUserInfoValues/>
     </user>
+    <user userName="marko">
+      <firstName>Marko</firstName>
+      <lastName>Markovic</lastName>
+      <title>Mr</title>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="petar">
+      <firstName>Petar</firstName>
+      <lastName>Petrovic</lastName>
+      <title>Mr</title>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="clan">
@@ -32,6 +50,16 @@
       <userName>guest</userName>
       <roleName>clan</roleName>
       <groupName>Gosti</groupName>
+    </membership>
+    <membership>
+      <userName>marko</userName>
+      <roleName>clan</roleName>
+      <groupName>Klijenti</groupName>
+    </membership>
+    <membership>
+      <userName>petar</userName>
+      <roleName>clan</roleName>
+      <groupName>Agenti</groupName>
     </membership>
   </memberships>
 </organization:Organization>

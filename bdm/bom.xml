@@ -76,6 +76,7 @@
         <businessObject qualifiedName="com.company.model.ZahtevZaNabavku">
             <fields>
                 <relationField type="COMPOSITION" reference="com.company.model.Posao" fetchType="EAGER" name="poslovi" nullable="true" collection="true"/>
+                <field type="LONG" length="255" name="idKlijenta" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
