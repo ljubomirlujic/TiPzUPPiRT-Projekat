@@ -36,6 +36,7 @@
                 <field type="TEXT" length="255" name="zahtjevDodatnihInformacija" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="odgovorDodatnihInformacija" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="datumPocetkaRadova" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="idAgentaFirme" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
