@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="InvertovanaAukcija">
-  <customUserInfoDefinitions/>
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>isAgent</name>
+      <description></description>
+    </customUserInfoDefinition>
+    <customUserInfoDefinition>
+      <name>kategorijePosla</name>
+      <description></description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
   <users>
     <user userName="guest">
       <firstName>guest</firstName>
@@ -8,7 +17,16 @@
       <personalData/>
       <professionalData/>
       <password encrypted="false">guest</password>
-      <customUserInfoValues/>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>isAgent</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>kategorijePosla</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
     </user>
     <user userName="marko">
       <firstName>Marko</firstName>
@@ -17,7 +35,16 @@
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>isAgent</name>
+          <value>false</value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>kategorijePosla</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
     </user>
     <user userName="petar">
       <firstName>Petar</firstName>
@@ -26,7 +53,33 @@
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>isAgent</name>
+          <value>true</value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>kategorijePosla</name>
+          <value>1,2</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="nenad">
+      <firstName>Nenad</firstName>
+      <lastName>Nenadovic</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>isAgent</name>
+          <value>true</value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>kategorijePosla</name>
+          <value>1</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
     </user>
   </users>
   <roles>
@@ -58,6 +111,11 @@
     </membership>
     <membership>
       <userName>petar</userName>
+      <roleName>clan</roleName>
+      <groupName>Agenti</groupName>
+    </membership>
+    <membership>
+      <userName>nenad</userName>
       <roleName>clan</roleName>
       <groupName>Agenti</groupName>
     </membership>
