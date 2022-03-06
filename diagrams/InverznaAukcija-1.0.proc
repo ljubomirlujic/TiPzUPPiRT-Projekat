@@ -12,15 +12,6 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_4as0-HFXEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_4as0-XFXEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_4as0-nFXEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_MAVIoJNCEeyRGIex6dovOw">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_MAVIoZNCEeyRGIex6dovOw" name="listaPoslova" content="listaPoslova" type="TYPE_VARIABLE" returnType="java.util.List">
-              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_M6C-4JNCEeyRGIex6dovOw" name="listaPoslova" multiple="true" dataType="_4as1InFXEeywcaqqGLWSMw" className="com.company.model.Posao"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_MAVIopNCEeyRGIex6dovOw" name="newScript()" content="return zahtevZaNabavkuInput.get(&quot;poslovi&quot;)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_KKJYMJNEEeyRGIex6dovOw" name="zahtevZaNabavkuInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_MAVIo5NCEeyRGIex6dovOw" type="ASSIGNMENT"/>
-          </operations>
           <operations xmi:type="expression:Operation" xmi:id="_uNt_CJNCEeyRGIex6dovOw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_uNt_CZNCEeyRGIex6dovOw" name="zahtevZaNabavku" content="zahtevZaNabavku" type="TYPE_VARIABLE" returnType="com.company.model.ZahtevZaNabavku">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_uNt_CpNCEeyRGIex6dovOw" name="zahtevZaNabavku" dataType="_4as1JHFXEeywcaqqGLWSMw" className="com.company.model.ZahtevZaNabavku"/>
@@ -32,6 +23,15 @@
             <operator xmi:type="expression:Operator" xmi:id="_uNt_D5NCEeyRGIex6dovOw" type="JAVA_METHOD" expression="setPoslovi">
               <inputTypes>java.util.List</inputTypes>
             </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MAVIoJNCEeyRGIex6dovOw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MAVIoZNCEeyRGIex6dovOw" name="listaPoslova" content="listaPoslova" type="TYPE_VARIABLE" returnType="java.util.List">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_M6C-4JNCEeyRGIex6dovOw" name="listaPoslova" multiple="true" dataType="_4as1InFXEeywcaqqGLWSMw" className="com.company.model.Posao"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MAVIopNCEeyRGIex6dovOw" name="newScript()" content="return zahtevZaNabavku.poslovi;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_cjeycJ11EeyIHp3VmEeNWg" name="zahtevZaNabavku" dataType="_4as1JHFXEeywcaqqGLWSMw" className="com.company.model.ZahtevZaNabavku"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_MAVIo5NCEeyRGIex6dovOw" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_4as0-3FXEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_4as0_HFXEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -110,7 +110,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_-mCiUY9SEeylyJ03MYLj0g" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_4as1BHFXEeywcaqqGLWSMw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_zq9MUJ0dEeyMgIRgbGAHZA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_w45o4J10EeyIHp3VmEeNWg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_4as1BnFXEeywcaqqGLWSMw">
         <targetForm xmi:type="expression:Expression" xmi:id="_4as1B3FXEeywcaqqGLWSMw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
