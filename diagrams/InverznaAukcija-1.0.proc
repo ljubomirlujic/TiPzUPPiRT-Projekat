@@ -80,7 +80,7 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Vl15e3FYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:CallActivity" xmi:id="_l-eUwHFYEeywcaqqGLWSMw" name="ObradaZahteva" outgoing="_b1LUEHFZEeywcaqqGLWSMw" incoming="_sua-kHFYEeywcaqqGLWSMw" type="PARALLEL" collectionDataToMultiInstantiate="_jWm_IHTQEeyr3YUd2VGIZw">
+        <elements xmi:type="process:CallActivity" xmi:id="_l-eUwHFYEeywcaqqGLWSMw" name="Obrada Zahteva" outgoing="_b1LUEHFZEeywcaqqGLWSMw" incoming="_sua-kHFYEeywcaqqGLWSMw" type="PARALLEL" collectionDataToMultiInstantiate="_jWm_IHTQEeyr3YUd2VGIZw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_iHxwAnFYEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_iHxwAXFYEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_iHxwA3FYEeywcaqqGLWSMw" name="" content="" returnTypeFixed="true"/>
@@ -91,7 +91,7 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_iHxwB3FYEeywcaqqGLWSMw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <inputMappings xmi:type="process:InputMapping" xmi:id="_B_WNkHTSEeyr3YUd2VGIZw" subprocessTarget="posao" assignationType="Data">
             <processSource xmi:type="expression:Expression" xmi:id="_B_WNkXTSEeyr3YUd2VGIZw" name="posao" content="posao" type="TYPE_VARIABLE" returnType="com.company.model.Posao">
-              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_Diy9UHTSEeyr3YUd2VGIZw" name="posao" dataType="_4as1InFXEeywcaqqGLWSMw" className="com.company.model.Posao"/>
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_ZBN4IJ0eEeyMgIRgbGAHZA" name="posao" dataType="_4as1InFXEeywcaqqGLWSMw" className="com.company.model.Posao"/>
             </processSource>
           </inputMappings>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_l-e703FYEeywcaqqGLWSMw" name="UgovaranjePosla" content="UgovaranjePosla" returnTypeFixed="true"/>
@@ -110,7 +110,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_-mCiUY9SEeylyJ03MYLj0g" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_4as1BHFXEeywcaqqGLWSMw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_zNeoIJNDEeyRGIex6dovOw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_zq9MUJ0dEeyMgIRgbGAHZA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_4as1BnFXEeywcaqqGLWSMw">
         <targetForm xmi:type="expression:Expression" xmi:id="_4as1B3FXEeywcaqqGLWSMw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

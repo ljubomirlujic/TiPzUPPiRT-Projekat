@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_QIeiwHFhEeywcaqqGLWSMw" name="PrikupljanjePonuda" author="Jelena" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_QIeiwXFhEeywcaqqGLWSMw" name="PrikupljanjePonuda">
       <elements xmi:type="process:Lane" xmi:id="_QIeiwnFhEeywcaqqGLWSMw" name="Agent firme" actor="_QIfJ33FhEeywcaqqGLWSMw">
@@ -20,48 +20,46 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_QIfJ1HFhEeywcaqqGLWSMw">
             <targetForm xmi:type="expression:Expression" xmi:id="_Ul_vAJMjEeyYsZE-IduNWA" name="agentKreiraPonuduForma" content="ace7e6c6-292b-4466-acfc-97a4b0946bf5" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_me8lYJ0aEeyMgIRgbGAHZA" name="agent" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_me8lYZ0aEeyMgIRgbGAHZA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_me8lYp0aEeyMgIRgbGAHZA" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_me8lY50aEeyMgIRgbGAHZA" name="userId()" content="agentId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_me8lZJ0aEeyMgIRgbGAHZA" name="agentId" dataType="_QIfJ83FhEeywcaqqGLWSMw"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_QIfJ1nFhEeywcaqqGLWSMw">
-            <inputs xmi:type="process:ContractInput" xmi:id="_W8x0oJMtEeyYsZE-IduNWA" name="posaoInput" type="COMPLEX" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0oZMtEeyYsZE-IduNWA" name="kategorijaPosla" type="COMPLEX" multiple="true" createMode="false">
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0opMtEeyYsZE-IduNWA" name="persistenceId_string" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0o5MtEeyYsZE-IduNWA" name="naziv" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_hPAjgJ0fEeyMgIRgbGAHZA" name="posaoInput" type="COMPLEX" dataReference="posao" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_hPAjgZ0fEeyMgIRgbGAHZA" name="kategorijaPosla" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_hPAjgp0fEeyMgIRgbGAHZA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_hPAjg50fEeyMgIRgbGAHZA" name="naziv" createMode="false"/>
               </inputs>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0pJMtEeyYsZE-IduNWA" name="opisPosla" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0pZMtEeyYsZE-IduNWA" name="vrednostPosla" type="DECIMAL" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0ppMtEeyYsZE-IduNWA" name="rokZaPrimanjePonuda" type="LOCALDATE" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0p5MtEeyYsZE-IduNWA" name="rokZaZavrsavanjePosla" type="LOCALDATE" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0qJMtEeyYsZE-IduNWA" name="ponude" type="COMPLEX" createMode="false">
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0qZMtEeyYsZE-IduNWA" name="persistenceId_string" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0qpMtEeyYsZE-IduNWA" name="prihvatiPosao" type="BOOLEAN" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0q5MtEeyYsZE-IduNWA" name="cena" type="DECIMAL" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0rJMtEeyYsZE-IduNWA" name="rokIzvrsenjaPosla" type="LOCALDATE" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0rZMtEeyYsZE-IduNWA" name="traziDodatneInformacije" type="BOOLEAN" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0rpMtEeyYsZE-IduNWA" name="zahtjevDodatnihInformacija" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0r5MtEeyYsZE-IduNWA" name="odgovorDodatnihInformacija" createMode="false"/>
-                <inputs xmi:type="process:ContractInput" xmi:id="_W8x0sJMtEeyYsZE-IduNWA" name="datumPocetkaRadova" type="LOCALDATE" createMode="false"/>
-              </inputs>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0sZMtEeyYsZE-IduNWA" name="zavrsen" type="BOOLEAN" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_W8x0spMtEeyYsZE-IduNWA" name="ocekivaniBrojPonuda" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_hPAjhJ0fEeyMgIRgbGAHZA" name="opisPosla" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_hPAjhZ0fEeyMgIRgbGAHZA" name="vrednostPosla" type="DECIMAL" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_hPAjhp0fEeyMgIRgbGAHZA" name="rokZaPrimanjePonuda" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_hPAjh50fEeyMgIRgbGAHZA" name="rokZaZavrsavanjePosla" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_hPAjiJ0fEeyMgIRgbGAHZA" name="ocekivaniBrojPonuda" type="INTEGER" createMode="false"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0s5MtEeyYsZE-IduNWA" expression="!posaoInput?.kategorijaPosla || posaoInput?.kategorijaPosla?.persistenceId_string" errorMessage="KategorijaPosla must reference an existing instance with a persistenceId for Posao" name="aggregation_posaoInput_kategorijaPosla">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAjiZ0fEeyMgIRgbGAHZA" expression="!posaoInput?.kategorijaPosla || posaoInput?.kategorijaPosla?.persistenceId_string" errorMessage="KategorijaPosla must reference an existing instance with a persistenceId for Posao" name="aggregation_posaoInput_kategorijaPosla">
               <inputNames>posaoInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0tJMtEeyYsZE-IduNWA" expression="posaoInput?.kategorijaPosla?.naziv.flatten().every{it!=null}" errorMessage="naziv is mandatory for KategorijaPosla" name="mandatory_posaoInput_kategorijaPosla_naziv">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAjip0fEeyMgIRgbGAHZA" expression="posaoInput?.kategorijaPosla?.naziv.flatten().every{it!=null}" errorMessage="naziv is mandatory for KategorijaPosla" name="mandatory_posaoInput_kategorijaPosla_naziv">
               <inputNames>posaoInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0tZMtEeyYsZE-IduNWA" expression="posaoInput?.opisPosla != null" errorMessage="opisPosla is mandatory for Posao" name="mandatory_posaoInput_opisPosla">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAji50fEeyMgIRgbGAHZA" expression="posaoInput?.opisPosla != null" errorMessage="opisPosla is mandatory for Posao" name="mandatory_posaoInput_opisPosla">
               <inputNames>posaoInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0tpMtEeyYsZE-IduNWA" expression="posaoInput?.vrednostPosla != null" errorMessage="vrednostPosla is mandatory for Posao" name="mandatory_posaoInput_vrednostPosla">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAjjJ0fEeyMgIRgbGAHZA" expression="posaoInput?.vrednostPosla != null" errorMessage="vrednostPosla is mandatory for Posao" name="mandatory_posaoInput_vrednostPosla">
               <inputNames>posaoInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0t5MtEeyYsZE-IduNWA" expression="posaoInput?.rokZaPrimanjePonuda != null" errorMessage="rokZaPrimanjePonuda is mandatory for Posao" name="mandatory_posaoInput_rokZaPrimanjePonuda">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAjjZ0fEeyMgIRgbGAHZA" expression="posaoInput?.rokZaPrimanjePonuda != null" errorMessage="rokZaPrimanjePonuda is mandatory for Posao" name="mandatory_posaoInput_rokZaPrimanjePonuda">
               <inputNames>posaoInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0uJMtEeyYsZE-IduNWA" expression="posaoInput?.rokZaZavrsavanjePosla != null" errorMessage="rokZaZavrsavanjePosla is mandatory for Posao" name="mandatory_posaoInput_rokZaZavrsavanjePosla">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAjjp0fEeyMgIRgbGAHZA" expression="posaoInput?.rokZaZavrsavanjePosla != null" errorMessage="rokZaZavrsavanjePosla is mandatory for Posao" name="mandatory_posaoInput_rokZaZavrsavanjePosla">
               <inputNames>posaoInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_W8x0uZMtEeyYsZE-IduNWA" expression="posaoInput?.ocekivaniBrojPonuda != null" errorMessage="ocekivaniBrojPonuda is mandatory for Posao" name="mandatory_posaoInput_ocekivaniBrojPonuda">
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_hPAjj50fEeyMgIRgbGAHZA" expression="posaoInput?.ocekivaniBrojPonuda != null" errorMessage="ocekivaniBrojPonuda is mandatory for Posao" name="mandatory_posaoInput_ocekivaniBrojPonuda">
               <inputNames>posaoInput</inputNames>
             </constraints>
           </contract>
@@ -102,8 +100,11 @@
       <data xmi:type="process:BusinessObjectData" xmi:id="_os4DEJM2EeyYsZE-IduNWA" name="posao" dataType="_QIfJ-HFhEeywcaqqGLWSMw" className="com.company.model.Posao">
         <defaultValue xmi:type="expression:Expression" xmi:id="_os4DEZM2EeyYsZE-IduNWA" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
+      <data xmi:type="process:Data" xmi:id="_W4EXIJ0aEeyMgIRgbGAHZA" name="agentId" dataType="_QIfJ83FhEeywcaqqGLWSMw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_W4EXIZ0aEeyMgIRgbGAHZA" content="" returnType="java.lang.Long"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_QIfJ2HFhEeywcaqqGLWSMw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_a15WEJM_EeyRGIex6dovOw" name="processAutogeneratedForm" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_zyhM4J0dEeyMgIRgbGAHZA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_QIfJ2nFhEeywcaqqGLWSMw">
         <targetForm xmi:type="expression:Expression" xmi:id="_QIfJ23FhEeywcaqqGLWSMw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
